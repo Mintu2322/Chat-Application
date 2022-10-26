@@ -2,11 +2,9 @@ const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
 
-const PORT = process.env.PORT || 5000
+const PORT = 5000
 
-http.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-})
+http.listen(PORT, console.log("Server listening on port " + PORT))
 
 app.use(express.static(__dirname + '/public'))
 
